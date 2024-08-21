@@ -27,6 +27,8 @@ task(`deploy-destination-chain-step1`, `Sets up the Cross Chain Name Service on 
         const spinner: Spinner = new Spinner();
         const [deployer] = await hre.ethers.getSigners();
 
+        console.log({deployer});
+
         console.log(`ℹ️  Attempting to deploy CrossChainNameServiceLookup on the ${hre.network.name} blockchain using ${deployer.address} address`);
         spinner.start();
 
